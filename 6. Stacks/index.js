@@ -51,11 +51,16 @@ class Stack {
   }
 
   printStack() {
-    let str = "";
-    for (let i = 0; i < this.items.length; i++) {
-      str += this.items[i] + " ";
-    }
-    return str;
+    // let str = "";
+    // for (let i = 0; i < this.items.length; i++) {
+    //   str += this.items[i] + " ";
+    // }
+    // return str;
+    console.log(this.items.toString());
+  }
+
+  size() {
+    return this.items.length;
   }
 }
 
@@ -84,6 +89,9 @@ console.log(stack.printStack()); // 10 20
 
 // Testing isEmpty on a non-empty stack
 console.log(stack.isEmpty()); // false
+
+// Calculating the size of the stack
+console.log(stack.size()); // 2
 
 // Time complexity
 // - The time complexity of the push operation is O(1).
