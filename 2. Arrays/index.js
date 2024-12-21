@@ -1,16 +1,11 @@
 // Arrays
 
 // - An Array is a Data structure that can hold a collection of values.
-
 // - Arrays can contain a mix of different data types. You can store string, booleans, numbers or even
 //   objects all in the same array. (Only acceptable in Javascript)
-
 // - Arrays are resizable. You don't have to declare the size of an array before creating it.
-
 // - Javascript arrays are zero-indexed and the insertion order is maintained.
-
 // - For example: const arr = [1,2,3,4] => 1 is at 0 index, ..., and 4 is at array.length - 1 idx i.e. 3
-
 // - Arrays are iterable. They can be traversed using for of loop.
 
 const arr = [1, 2, 3, "Rishabh"];

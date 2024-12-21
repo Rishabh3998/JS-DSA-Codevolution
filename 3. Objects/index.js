@@ -2,10 +2,8 @@
 
 // - An object is and unordered collection of key-value pairs. The key must either be a string or symbol
 //   data type where as the value can be of any data type.
-
 // - To retrieve the value, you can use the corresponding key. This can be achieved using the dot notation
 //   or bracket notation.
-
 // - An object is not iterable. You cannot use the for of loop on an object. But if we still want to access
 //   all the key value pairs of an object one by one we can use Object.keys, Object.values, Object.entries.
 
