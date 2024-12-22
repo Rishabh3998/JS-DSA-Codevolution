@@ -81,4 +81,64 @@ class DoublyLinkedList {
       current = current.next;
     }
   }
+
+  printReverse() {
+    let current = this.tail;
+    while (current) {
+      console.log(current.data);
+      current = current.prev;
+    }
+  }
+
+  getHead() {
+    return this.head;
+  }
+
+  getTail() {
+    return this.tail;
+  }
+
+  isEmpty() {
+    return this.head === null;
+  }
+
+  clear() {
+    this.head = null;
+    this.tail = null;
+  }
+
+  getLength() {
+    let current = this.head;
+    let count = 0;
+    while (current) {
+      count++;
+      current = current.next;
+    }
+    return count;
+  }
+
+  insertAtStart(data) {
+    const newNode = new Node(data);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      newNode.next = this.head;
+      this.head.prev = newNode;
+      this.head = newNode;
+    }
+  }
+
+  deleteAtStart() {
+    if (!this.head) {
+      return null;
+    }
+    if (this.head === this.tail) {
+      this.head = null;
+      this.tail = null;
+      return;
+    }
+    this.head = this.head.next;
+    this.head.prev = null;
+  }
 }
