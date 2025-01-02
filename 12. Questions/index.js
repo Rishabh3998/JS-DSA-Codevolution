@@ -111,3 +111,86 @@ console.log(resC);
 
 const resC2 = chunk([1, 2, 3, 4, 5], 2);
 console.log(resC2);
+
+// Question 5:
+// Write a function that accepts a string. The function should capitalize the first letter of each word in
+// the string then return the capitalized string.
+
+// Examples:
+// capitalize('a short sentence') === 'A Short Sentence'
+// capitalize('a lazy fox') === 'A Lazy Fox'
+
+function capitalize(str) {
+  let words = str.split(" ");
+  let result = [];
+  words.forEach((word) => {
+    result.push(`${word[0].toUpperCase()}${word.slice(1)}`);
+  });
+  return result.join(" ");
+}
+
+const resCap = capitalize("a short sentence");
+console.log(resCap);
+
+const resCap2 = capitalize("a lazy fox");
+console.log(resCap2);
+
+// Question 6:
+// Check if the two given strings are anagrams of each other.
+
+// Examples:
+// anagrams('rail safety', 'fairy tales') === true
+// anagrams('hello', 'bye') === false
+
+function isAnagram(str1, str2) {
+  const map = {};
+  for (let char of str1) {
+    if (map[char]) {
+      map[char]++;
+    } else {
+      map[char] = 1;
+    }
+  }
+  for (let char of str2) {
+    if (map[char]) {
+      map[char]--;
+    }
+  }
+  let result = true;
+  Object.keys(map).forEach((key) => {
+    if (map[key] !== 0) {
+      result = false;
+    }
+  });
+  return result;
+}
+
+const resA = isAnagram("rail safety", "fairy tales");
+console.log(resA);
+
+const resA2 = isAnagram("hello", "bye");
+console.log(resA2);
+
+// Question 7:
+// Write a function that returns the number of vowels used in a string.
+
+// Examples:
+// vowels('hello') === 2
+// vowels('why') === 0
+
+function vowels(str) {
+  const vowels = ["a", "e", "i", "o", "u"];
+  let count = 0;
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+  return count;
+}
+
+const resV = vowels("hello");
+console.log(resV);
+
+const resV2 = vowels("why");
+console.log(resV2);
